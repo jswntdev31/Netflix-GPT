@@ -1,6 +1,8 @@
 # Netflix GPT
 - Create react app Using Vite
 - Configured Tailwind 
+- Login Form
+- Sign Up Form
 
 # Features
 - Login/Sign Up

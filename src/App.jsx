@@ -1,7 +1,10 @@
+import Body from "./components/Body";
 const App = () => {
-  return(
-       <div className="text-3xl font-bold text-green-300">hello jee</div>
-  )
-}
+  return (
+    <div>
+      <Body />
+    </div>
+  );
+};
 
-export default App
+export default App;
