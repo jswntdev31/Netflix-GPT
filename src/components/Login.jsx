@@ -11,11 +11,10 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { BG_IMG, USER_AVATAR } from "../utils/constants";
 
-
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const name = useRef(null);
   const email = useRef(null);
@@ -44,7 +43,7 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:USER_AVATAR
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -56,7 +55,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-             
             })
             .catch((error) => {
               setErrorMessage(error.message);
@@ -78,7 +76,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           // console.log(user);
-          
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -91,12 +88,12 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute">
-        <img src={BG_IMG} />
+      <div className="absolute w-full h-screen">
+        <img className="w-full h-full object-cover" src={BG_IMG} />
       </div>
 
       <form
-        className="absolute w-3/12 p-12 my-36 mx-auto right-0 left-0 bg-black/80 text-white rounded-lg "
+        className="absolute w-full md:w-3/12 p-12 my-36 mx-auto right-0 left-0 bg-black/80 text-white rounded-lg "
         onSubmit={(e) => e.preventDefault()}
       >
         <h1 className="font-bold text-3xl py-4">

@@ -35,6 +35,15 @@
 - GPT Search Page
 - GPT Search Bar
 - (Bonus) Multi-language feature in our App 
+- Get HuggingFace AI Api Key
+- GPT Search API Call
+- fetched gptMoviesSuggestions from TMDB
+- created gptSlice added data
+- Resused Movie List component to make movie suggestion container
+- Memoization
+- Added .env file
+- Adding .env file to gitignore
+- Made our Site Responsive
 
 # Features
 - Login/Sign Up
